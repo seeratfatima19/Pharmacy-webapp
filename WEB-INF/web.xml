@@ -1,0 +1,34 @@
+<web-app>
+
+<servlet>
+	<servlet-name>UserServlet</servlet-name>
+    <servlet-class>UserServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>UserServlet</servlet-name>
+	<url-pattern>/UserServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>SignupServlet</servlet-name>
+    <servlet-class>SignupServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>SignupServlet</servlet-name>
+	<url-pattern>/SignupServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>AdminServlet</servlet-name>
+    <servlet-class>AdminServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>AdminServlet</servlet-name>
+	<url-pattern>/AdminServlet</url-pattern>
+</servlet-mapping>
+
+
+</web-app>

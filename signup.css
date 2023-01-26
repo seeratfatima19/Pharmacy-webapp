@@ -1,0 +1,29 @@
+.form-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    width: 40%;
+    border-radius: 2%;
+}
+
+.row-1, .row-2, .row-3{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    padding: 10px;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.col-1{
+
+    margin-right: 40px;
+}
+
+.error-container{
+
+    color:red;
+}

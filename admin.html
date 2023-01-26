@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Admin Login</title>
+    <link href="style.css" rel="stylesheet">
+    <script>
+        function validate_form()
+        {
+
+            var usr= document.getElementById('usr-name').value;
+            var pass= document.getElementById('passwd').value;
+            
+            if(usr=="")
+            { document.getElementById('error-container').innerHTML= "User name can't be empty";
+                return false;
+            }
+
+            if(pass=="")
+            {     document.getElementById('error-container').innerHTML= "Password can't be empty";
+                  return false;
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="page-container">
+    <div class="form-container" id="container-1">
+        <h2>Sign In</h2>
+        <span class="error-container" id="error-container"></span>
+        <form action="AdminServlet" method="post">
+            <label>Username:</label><br>
+            <input type="text" name="Username" id="usr-name"><br><br>
+            <label>Password:</label><br>
+            <input type="text" name="Password" id="passwd"><br><br>
+
+            <button onclick="return validate_form();" class="btn" type="submit" id="login">LOGIN</button>
+
+        </form>
+
+    </div>
+</div>
+    
+</body>
+
+</html>

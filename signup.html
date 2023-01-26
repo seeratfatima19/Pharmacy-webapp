@@ -1,0 +1,118 @@
+<html>
+
+<head>
+
+    <title>Sign Up</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet">
+    <script>
+        function validate_form(){
+
+            var fname= document.getElementById('fname').value;
+            var lname= document.getElementById('lname').value;
+            var usr= document.getElementById('usr-name').value;
+            var email= document.getElementById('mail').value;
+            var pass= document.getElementById('passwd').value;
+            var confirm = document.getElementById('c-passwd').value;
+
+            if(fname=="")
+            {   document.getElementById('error-container').innerHTML= "First Name can't be empty!";
+                return false;
+            }
+
+            if(!(/^[A-Za-z]+$/.test(fname)))
+            {   document.getElementById('error-container').innerHTML= "Enter alphabets only in name";
+                return false;
+            }
+
+            if(lname=="")
+            {   document.getElementById('error-container').innerHTML= "Last Name can't be empty!";
+                return false;
+            }
+
+            if(!(/^[A-Za-z]+$/.test(lname)))
+            {   document.getElementById('error-container').innerHTML= "Enter alphabets only in name";
+                return false;
+            }
+            
+
+            if(usr=="")
+            { document.getElementById('error-container').innerHTML= "User name can't be empty";
+                return false;
+            }
+
+            if(email=="")
+            { document.getElementById('error-container').innerHTML= "Enter Email";
+                return false;
+            }
+            if(pass=="")
+            {     document.getElementById('error-container').innerHTML= "Password can't be empty";
+                  return false;
+            }
+
+            if(pass!==confirm){
+                 document.getElementById('error-container').innerHTML= "Passwords dont match!";
+                 return false;
+            }
+            
+
+            
+                
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div class="page-container">
+    <div class="form-container" id="form1">
+
+        <h2>Sign Up</h2>
+        <span class="error-container" id="error-container"></span>
+        <form action="SignupServlet" method="post">
+        <div class="row-1">
+            <span class="col-1">
+            <label>First Name:</label><br> 
+            <input type="text" name="First Name" id="fname"><br><br>
+            </span>
+
+            <span class="col-2">
+            <label>Last Name:</label><br>
+            <input type="text" name="Last Name" id="lname"><br><br>
+            </span>
+        </div>
+
+        <div class="row-2">
+            <span class="col-1">
+            <label>Username:</label><br>
+            <input type="text" name="Username" id="usr-name"><br><br>
+            </span>
+
+            <span class="col-2">
+            <label>Email:</label><br>
+            <input type="email" name="Email" id="mail"><br><br>
+            </span>
+        </div>
+        
+        <div class="row-3">
+            <span class="col-1">
+            <label>Password:</label><br>
+            <input type="text" name="Password" id="passwd"><br><br>
+            </span>
+
+            <span class="col-2">
+            <label>Confirm Password:</label><br>
+            <input type="text" name="Confirm Password" id="c-passwd"><br><br>
+            </span>
+        </div>
+            <button class="btn" type="submit" onclick= "return validate_form();" id="signup">Signup</button>
+        </form>
+        
+    </div>
+</div>
+    
+</body>
+
+</html>

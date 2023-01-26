@@ -1,0 +1,102 @@
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'); 
+
+  }
+  
+  @font-face {
+    font-family: Ubuntu-Bold;
+    src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
+  }
+
+
+body, html {
+	height: 100%;
+	font-family: Ubuntu-Regular, sans-serif;
+}
+
+
+.page-container{
+
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:-10px;
+    height: 100%;
+    background-image: url(assets/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.form-container{
+
+    width:20%;
+    height:60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+  
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.2);
+    
+
+    
+}
+
+.btn{
+
+    
+ 
+  color:white;
+  font-size: large;
+  border-style: none;
+  margin-top:30px;
+  padding:15px 70px;
+  border-radius: 10px;;
+  background: #342e2a;
+  background: -webkit-linear-gradient(left, #342e2a, #3A434D, #425c76);
+ 
+}
+
+label{
+
+    font-size: large;
+    padding-bottom: 20px;
+}
+
+
+input{
+
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+    border-style: none none solid none;
+}
+
+input:focus{
+
+    outline:none;
+}
+
+.sign-up-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.error-container{
+
+    color:red;
+}

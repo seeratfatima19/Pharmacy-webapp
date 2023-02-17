@@ -4,11 +4,6 @@
 
   }
   
-  @font-face {
-    font-family: Ubuntu-Bold;
-    src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
-  }
-
 
 body, html {
 	height: 100%;
@@ -100,3 +95,4 @@ input:focus{
 
     color:red;
 }
+
